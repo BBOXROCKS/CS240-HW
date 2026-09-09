@@ -1,0 +1,138 @@
+# Assignment 1: Converter and Pixel System
+
+This project demonstrates how information can be represented using ASCII values, number bases, and image pixels. The programs were written in Java and Python.
+
+## GitHub Link
+
+[Insert GitHub repository link here]
+
+## Programs
+
+### `hw1.java`
+
+Asks the user to enter a string and prints the decimal ASCII value of each character.
+
+Example:
+
+```text
+Enter your string: ABC
+65
+66
+67
+```
+
+### `hw1.py`
+
+Converts each character in the string `"Dominic"` to its decimal ASCII value. It displays the values individually and as a comma-separated list.
+
+### `hw1_2.java`
+
+Asks the user for a number and its current base. It converts the number into:
+
+- Binary
+- Decimal
+- Octal
+- Hexadecimal
+
+The supported bases are 2, 8, 10, and 16.
+
+### `hw1_3.java` and `hw1_3.py`
+
+Read `smiley.png` and convert its pixels into text.
+
+The following abbreviations are used:
+
+- `R` = Red `(237, 28, 36)`
+- `B` = Black `(0, 0, 0)`
+- `Y` = Yellow `(255, 242, 0)`
+
+Any other color is written as its RGB value. The results are saved in `output.txt`.
+
+### `hw1_4.py`
+
+Reads the color letters stored in `input.txt` and creates an 11-by-11 RGB image. The completed image is saved as `output.png`.
+
+## Project Files
+
+```text
+hw1.java       Java ASCII-to-decimal converter
+hw1.py         Python ASCII-to-decimal converter
+hw1_2.java     Number-base converter
+hw1_3.java     Java image-to-pixel converter
+hw1_3.py       Python image-to-pixel converter
+hw1_4.py       Pixel-to-image converter
+input.txt      Pixel data used to create the image
+output.txt     Pixel data produced from smiley.png
+output.png     Image generated from input.txt
+smiley.png     Original image used by the pixel-reading programs
+README.md      Project documentation
+```
+
+## Requirements
+
+- Java Development Kit
+- Python 3
+- Pillow Python library
+
+Install Pillow using:
+
+```bash
+python -m pip install Pillow
+```
+
+## How to Run
+
+The Java files use the package `CS240.HW1`. Run them from the folder containing the `CS240` folder:
+
+```bash
+javac CS240/HW1/hw1.java
+java CS240.HW1.hw1
+```
+
+```bash
+javac CS240/HW1/hw1_2.java
+java CS240.HW1.hw1_2
+```
+
+```bash
+javac CS240/HW1/hw1_3.java
+java CS240.HW1.hw1_3
+```
+
+Run the Python programs with:
+
+```bash
+python hw1.py
+python hw1_3.py
+python hw1_4.py
+```
+
+Make sure `smiley.png` is available in the working folder before running either version of `hw1_3`.
+
+## Testing
+
+The programs were tested with normal values and boundary cases.
+
+| Test | Input | Expected result |
+| --- | --- | --- |
+| ASCII character | `A` | `65` |
+| Zero | Decimal `0` | Binary, octal, and hexadecimal `0` |
+| Normal conversion | Decimal `42` | Binary `101010`, octal `52`, hexadecimal `2a` |
+| Largest positive Java integer | Decimal `2147483647` | Correct conversion in each base |
+| Negative two's complement | Decimal `-1` | 32 binary ones |
+| Image reading | `smiley.png` | Pixel data saved in `output.txt` |
+| Image creation | `input.txt` | 11-by-11 image saved as `output.png` |
+
+## Sources and Collaboration
+
+- ZyBooks Chapter 1: Information as Bits
+- Java documentation
+- Python Pillow documentation
+- ChatGPT was used to explain programming concepts, troubleshoot errors, and help create the project documentation. All submitted code was reviewed and understood by the student.
+
+## Author
+
+Bryan Brady
+
+
+AboutMe Generated with ChatGPT
